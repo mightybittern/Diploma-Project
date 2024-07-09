@@ -15,7 +15,7 @@ This project is licensed under the MIT License.
 
 ---
 
-![PANDA POWER]([URL_to_the_GIF](https://images.app.goo.gl/zq5woVnyEi1XWacj8))
+![PANDA POWER](https://images.app.goo.gl/zq5woVnyEi1XWacj8))
 
 ⭐ **Spam them stars!!!** ⭐
-`#0969DA`
+HEX `#0969DA`
