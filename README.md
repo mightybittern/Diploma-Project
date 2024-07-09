@@ -15,7 +15,7 @@ This project is licensed under the MIT License.
 
 ---
 
-![PANDA POWER][(https://images.app.goo.gl/zq5woVnyEi1XWacj8](https://github.com/images/modules/search/mona-love.png))
+![][(https://myoctocat.com/assets/images/base-octocat.svg)
 
 ⭐ **Spam them stars!!!** ⭐
 HEX `#0969DA`
