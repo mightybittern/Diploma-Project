@@ -15,7 +15,7 @@ This project is licensed under the MIT License.
 
 ---
 
-![][(https://myoctocat.com/assets/images/base-octocat.svg)
+![Meow!](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ⭐ **Spam them stars!!!** ⭐
 HEX `#0969DA`
