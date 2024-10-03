@@ -234,7 +234,13 @@ a {
 
 .nav-item {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+.bold-placeholder {
+    font-weight: 700;
+    visibility: hidden;
+    margin-bottom: -25px;
 }
 
 .nav-item::after {
@@ -245,9 +251,9 @@ a {
     bottom: 0;
     left: 0;
     background-color: var(--black);
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-item:hover::after,
@@ -266,16 +272,14 @@ a {
     height: 6px;
     width: 12px;
     position: absolute;
-    right: 0;
+    right: 3px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -o-transition: 0.3s ease;
 }
 
 .nav-item:nth-child(2):hover::before,
@@ -300,7 +304,7 @@ a {
     border-radius: 10px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2px;
     padding: 1px 6px;
 }
 
@@ -309,17 +313,18 @@ a {
 }
 
 .nav-item a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     letter-spacing: 0;
-    -webkit-transition: text-shadow 0.3s ease-in-out;
-    -o-transition: text-shadow 0.3s ease-in-out;
-    transition: text-shadow 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
     outline: 0;
 }
 
 .nav-item:hover a,
 .nav-item:focus-within a {
-    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.85), -1px 0 0 rgba(0, 0, 0, 0.85), 0 1px 0 rgba(0, 0, 0, 0.85), 0 -1px 0 rgba(0, 0, 0, 0.85);
+    font-weight: 700;
 }
 
 .nav-item:nth-child(2)::after {
@@ -331,25 +336,19 @@ a {
     transform: none;
 }
 
-.active-nav-link:hover::after,
-.active-nav-link:hover a {
-    text-shadow: none;
-    width: 0;
-}
-
 .active-nav-link::after {
     width: 100%;
 }
 
 .active-nav-link a {
-    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.85), -1px 0 0 rgba(0, 0, 0, 0.85), 0 1px 0 rgba(0, 0, 0, 0.85), 0 -1px 0 rgba(0, 0, 0, 0.85);
+    font-weight: 700;
 }
 
 .top-nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 33px;
+    gap: 31px;
     margin-right: auto;
     height: -webkit-min-content;
     height: -moz-min-content;
@@ -393,9 +392,9 @@ a {
 .view-mode,
 .pagination-buttons {
     background-color: var(--back-light-blue);
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .top-nav-btns .top-nav-btn-svg path,
@@ -404,15 +403,15 @@ a {
 .social-link .social-link-svg path,
 .view-mode .view-mode-svg path,
 .pagination-buttons .pagination-buttons-svg path {
-    -webkit-transition: fill 0.3s ease;
-    -o-transition: fill 0.3s ease;
-    transition: fill 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .lp-list-item .lp-price {
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .top-nav-btns:hover,
@@ -426,15 +425,11 @@ a {
 
 .page-number:hover,
 .page-number:focus,
-.page-number:active,
-.page-number:visited,
 .page-more:hover,
-.page-more:focus,
-.page-more:active,
-.page-more:visited {
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+.page-more:focus {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
     color: var(--back-blue);
     outline: none;
 }
@@ -521,9 +516,9 @@ a {
 .submit-button:hover,
 .col-button:hover {
     background-color: var(--dark-blue);
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .main.submit-button {
@@ -657,9 +652,9 @@ a {
     bottom: 0;
     left: 0;
     background-color: var(--black);
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .clear-all-button:hover::after {
@@ -694,9 +689,9 @@ a {
 
 .expand-button:hover {
     scale: 1.125;
-    -webkit-transition: scale 0.3s ease;
-    -o-transition: scale 0.3s ease;
-    transition: scale 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .incdec {
@@ -717,9 +712,9 @@ a {
 
 .incdec-svg:hover path {
     fill-opacity: 100;
-    -webkit-transition: fill-opacity 0.3s ease;
-    -o-transition: fill-opacity 0.3s ease;
-    transition: fill-opacity 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .bottom-preview {
@@ -734,9 +729,9 @@ a {
 .bottom-preview:hover {
     background-color: var(--back-blue);
     color: var(--back-light-blue);
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .bottom.submit-button {
@@ -815,11 +810,9 @@ a {
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -o-transition: 0.3s ease;
 }
 
 .article-link:hover::before,
@@ -1000,9 +993,9 @@ a {
     background-color: var(--back-light-blue);
     padding: 37px;
     border-radius: 20px;
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
     display: block;
 }
 
@@ -1018,9 +1011,9 @@ a {
 
 .p-product-image path {
     stroke: var(--back-blue);
-    -webkit-transition: stroke 0.3s ease;
-    -o-transition: stroke 0.3s ease;
-    transition: stroke 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .p-product-link:hover .p-product-image path,
@@ -1080,19 +1073,15 @@ a {
 .article-list-item {
     -webkit-box-shadow: 0 4px 40px 0 #1D395F05;
     box-shadow: 0 4px 40px 0 #1D395F05;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
 }
 
 .tp-article-list-item {
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
 }
 
 .article-list-item:hover,
@@ -1944,15 +1933,15 @@ a {
 }
 
 .blog-img {
-    -webkit-transition: outline 0.3s ease;
-    -o-transition: outline 0.3s ease;
-    transition: outline 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .blog-article .blog-text {
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .blog-list-item:hover .blog-img {
@@ -2114,9 +2103,9 @@ a {
     position: relative;
     display: inline-block;
     color: var(--black50);
-    -webkit-transition: color 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .blk.menu-item a {
@@ -2140,9 +2129,9 @@ a {
     width: 0;
     height: 1px;
     background-color: var(--black);
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .menu-item:hover a::before,
@@ -2256,9 +2245,9 @@ a {
     width: 0;
     height: 1px;
     background-color: var(--white50);
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .cr-list-item:hover a::before,
@@ -2746,11 +2735,9 @@ a {
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.87504 11.5C7.7152 11.5 7.5552 11.4389 7.43316 11.3169L1.18316 5.06691C0.938945 4.8227 0.938945 4.42723 1.18316 4.18316C1.42738 3.9391 1.82285 3.93895 2.06691 4.18316L7.87504 9.99129L13.6832 4.18316C13.9274 3.93895 14.3229 3.93895 14.5669 4.18316C14.811 4.42738 14.8111 4.82285 14.5669 5.06691L8.31692 11.3169C8.19488 11.4389 8.03488 11.5 7.87504 11.5Z' fill='%230F73F6'/%3E%3C/svg%3E ");
     pointer-events: none;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
 }
 
 .sortby-wrapper:hover::after {
